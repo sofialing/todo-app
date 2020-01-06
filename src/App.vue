@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app" class="container my-5">
+		<TodayInfo />
+		<TodoList />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodayInfo from './components/TodayInfo.vue';
+import TodoList from './components/TodoList.vue';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+	name: 'app',
+	components: {
+		TodayInfo,
+		TodoList
+	}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600&display=swap');
+@import 'https://cdn.jsdelivr.net/npm/animate.css@3.5.1';
+
+body {
+	background-color: #1e3a40;
+	color: #ffffff;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container {
+	max-width: 450px;
 }
 </style>
